@@ -2491,7 +2491,10 @@ textarea.form-control {
   position: fixed;
   bottom: 1.5rem;
   left: 50%;
-  transform: translateX(-50%) translateY(120%);
+  transform: translateX(-50%) translateY(250%);
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
   max-width: 780px;
   width: calc(100% - 2rem);
   background: rgba(13, 17, 26, 0.95);
@@ -2502,11 +2505,14 @@ textarea.form-control {
   z-index: 999;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, visibility 0.4s ease;
 }
 
 .cookie-hud.visible {
   transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
 }
 
 .cookie-hud-content {

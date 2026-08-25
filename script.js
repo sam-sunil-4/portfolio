@@ -1594,7 +1594,12 @@ Motto    : "With great automation comes zero downtime!" 🕷️
     try {
       localStorage.setItem('spidey_cookie_consent', JSON.stringify(settings));
     } catch(e) {}
-    if (cookieHud) cookieHud.classList.remove('visible');
+    if (cookieHud) {
+      cookieHud.classList.remove('visible');
+      setTimeout(() => {
+        cookieHud.style.display = 'none';
+      }, 400);
+    }
     if (cookieModalOverlay) cookieModalOverlay.classList.remove('open');
   }
 
@@ -1602,29 +1607,43 @@ Motto    : "With great automation comes zero downtime!" 🕷️
   const consent = getCookieConsent();
   if (!consent && cookieHud) {
     setTimeout(() => {
-      cookieHud.classList.add('visible');
+      cookieHud.style.display = 'block';
+      requestAnimationFrame(() => {
+        cookieHud.classList.add('visible');
+      });
     }, 1200);
-  } else if (consent) {
+  } else if (cookieHud) {
+    cookieHud.style.display = 'none';
+  }
+
+  if (consent) {
     if (prefSfx) prefSfx.checked = consent.sfx !== false;
     if (prefAnalytics) prefAnalytics.checked = consent.analytics !== false;
   }
 
   if (cookieAcceptAllBtn) {
-    cookieAcceptAllBtn.addEventListener('click', () => {
+    cookieAcceptAllBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
       saveCookieConsent({ essential: true, sfx: true, analytics: true, timestamp: Date.now() });
       playWebSwishSound();
     });
   }
 
   if (cookieEssentialBtn) {
-    cookieEssentialBtn.addEventListener('click', () => {
+    cookieEssentialBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
       saveCookieConsent({ essential: true, sfx: false, analytics: false, timestamp: Date.now() });
       playWebSwishSound();
     });
   }
 
   if (cookiePrefsOpenBtn) {
-    cookiePrefsOpenBtn.addEventListener('click', () => {
+    cookiePrefsOpenBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      if (cookieHud) cookieHud.classList.remove('visible');
       if (cookieModalOverlay) cookieModalOverlay.classList.add('open');
       playWebSwishSound();
     });
