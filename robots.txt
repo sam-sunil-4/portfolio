@@ -1,0 +1,9 @@
+# robots.txt for Sam Sunil DevOps Portfolio (sam-sunil-4.github.io)
+User-agent: *
+Allow: /
+Disallow: /404.html
+Disallow: /403.html
+Disallow: /maintenance.html
+
+# Sitemap location
+Sitemap: https://sam-sunil-4.github.io/sitemap.xml

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="black">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>403 — Security Protocol Active | Sam Sunil Portfolio</title>
+  <meta name="description" content="403 Forbidden: Security firewall active. Access restricted by Spidey cluster IAM policy.">
+  <meta name="robots" content="noindex, follow">
+  
+  <!-- OpenGraph -->
+  <meta property="og:title" content="403 — Access Restricted | Sam Sunil">
+  <meta property="og:description" content="Security shield active. Unauthorized ingress attempt blocked.">
+  <meta property="og:image" content="assets/og-preview.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Fira+Code:wght@400;500;700&family=Outfit:wght@400;500;600;700;900&family=Rajdhani:wght@600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="stylesheet" href="styles.css?v=2.7">
+  <style>
+    .status-page-wrapper {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.5rem;
+      position: relative;
+      z-index: 2;
+    }
+    .status-card {
+      background: rgba(13, 17, 26, 0.85);
+      border: 1px solid rgba(255, 189, 46, 0.5);
+      border-radius: 16px;
+      padding: 3rem 2.5rem;
+      max-width: 620px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7), 0 0 35px rgba(255, 189, 46, 0.2);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+    .status-code-glitch {
+      font-family: var(--font-heading);
+      font-size: 5.5rem;
+      line-height: 1;
+      letter-spacing: 6px;
+      color: #FFBD2E;
+      text-shadow: 0 0 25px rgba(255, 189, 46, 0.7), 0 0 50px rgba(255, 189, 46, 0.3);
+      margin-bottom: 0.5rem;
+    }
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255, 189, 46, 0.15);
+      border: 1px solid #FFBD2E;
+      color: #FFE082;
+      font-family: var(--font-subheading);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      padding: 0.35rem 0.9rem;
+      border-radius: 30px;
+      margin-bottom: 1.5rem;
+    }
+    .status-desc {
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+    .status-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+  <!-- Canvas Background -->
+  <canvas id="web-canvas"></canvas>
+
+  <div class="status-page-wrapper">
+    <div class="status-card">
+      <div class="status-badge">
+        <i class="fas fa-shield-halved"></i> SECURITY PROTOCOL ACTIVE // 403
+      </div>
+      <h1 class="status-code-glitch">403</h1>
+      <h2 style="font-family: var(--font-subheading); color: #FFF; font-size: 1.6rem; margin-bottom: 0.8rem;">
+        INGRESS ACCESS RESTRICTED
+      </h2>
+      <p class="status-desc">
+        Spidey-Sense Defense Firewall has intercepted an unauthorized ingress attempt. Your client credentials do not possess the required RBAC role permissions for this endpoint.
+      </p>
+
+      <div class="status-actions">
+        <a href="/" class="btn-primary">
+          <i class="fas fa-house-chimney"></i> Return to Safe Harbor
+        </a>
+        <a href="/#contact" class="btn-secondary">
+          <i class="fas fa-key"></i> Request Access Signal
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 320" class="hanging-spidey-svg">
+  <defs>
+    <linearGradient id="spidey-body-red" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="var(--spidey-red-light, #FF3B42)"/>
+      <stop offset="70%" stop-color="var(--spidey-red, #E62429)"/>
+      <stop offset="100%" stop-color="var(--spidey-red-dark, #A50F14)"/>
+    </linearGradient>
+
+    <linearGradient id="spidey-body-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="var(--spidey-blue-light, #0088FF)"/>
+      <stop offset="100%" stop-color="var(--spidey-blue, #0055A5)"/>
+    </linearGradient>
+
+    <radialGradient id="eye-glow-radial" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="80%" stop-color="#E2EEF8"/>
+      <stop offset="100%" stop-color="#A5C4DC"/>
+    </radialGradient>
+
+    <filter id="spidey-drop-shadow">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="rgba(0,0,0,0.6)" />
+    </filter>
+  </defs>
+
+  <g filter="url(#spidey-drop-shadow)">
+    <!-- Web Thread Line -->
+    <line x1="80" y1="0" x2="80" y2="110" stroke="rgba(255, 255, 255, 0.85)" stroke-width="2" stroke-dasharray="4,2" class="hanging-web-thread" />
+    
+    <!-- Upside Down Spider-Man Body Group -->
+    <g transform="translate(80, 110)">
+      
+      <!-- Hands holding Web Line -->
+      <ellipse cx="0" cy="0" rx="7" ry="5" fill="url(#spidey-body-red)" />
+
+      <!-- Arms extending down to torso -->
+      <path d="M -5 0 Q -18 20 -12 40" stroke="url(#spidey-body-red)" stroke-width="8" stroke-linecap="round" fill="none" />
+      <path d="M 5 0 Q 18 20 12 40" stroke="url(#spidey-body-red)" stroke-width="8" stroke-linecap="round" fill="none" />
+
+      <!-- Torso (Upside Down) -->
+      <!-- Chest / Back Red & Blue Suit Pattern -->
+      <path d="M -16 35 C -20 50 -18 70 -12 85 L 12 85 C 18 70 20 50 16 35 Z" fill="url(#spidey-body-blue)" />
+      <path d="M -10 35 L -6 85 L 6 85 L 10 35 Z" fill="url(#spidey-body-red)" />
+
+      <!-- Spider Logo on Chest -->
+      <path d="M 0 52 L -3 58 L 0 65 L 3 58 Z" fill="#0B0E14" />
+      <path d="M 0 56 L -9 50 M 0 56 L 9 50 M 0 60 L -10 68 M 0 60 L 10 68" stroke="#0B0E14" stroke-width="1.5" />
+
+      <!-- Legs Hanging / Bent Upside Down -->
+      <!-- Left Leg bent outward -->
+      <path d="M -12 85 Q -32 105 -22 135 Q -15 155 -8 170" stroke="url(#spidey-body-blue)" stroke-width="9" stroke-linecap="round" fill="none" />
+      <path d="M -22 135 Q -15 155 -8 170" stroke="url(#spidey-body-red)" stroke-width="9" stroke-linecap="round" fill="none" />
+
+      <!-- Right Leg tucked -->
+      <path d="M 12 85 Q 28 100 20 125 Q 15 145 22 165" stroke="url(#spidey-body-blue)" stroke-width="9" stroke-linecap="round" fill="none" />
+      <path d="M 20 125 Q 15 145 22 165" stroke="url(#spidey-body-red)" stroke-width="9" stroke-linecap="round" fill="none" />
+
+      <!-- Upside Down Mask Head (Lower down at y=100-140) -->
+      <g transform="translate(0, 105)">
+        <!-- Head Base Shape -->
+        <ellipse cx="0" cy="0" rx="18" ry="22" fill="url(#spidey-body-red)" stroke="#0B0E14" stroke-width="2" />
+
+        <!-- Webbing lines on head -->
+        <path d="M 0 -22 L 0 22 M -18 0 L 18 0" stroke="rgba(11, 14, 20, 0.4)" stroke-width="1.2" />
+        <path d="M -12 -14 Q 0 -8 12 -14 M -16 -4 Q 0 4 16 -4 M -16 8 Q 0 16 16 8" stroke="rgba(11, 14, 20, 0.4)" stroke-width="1.2" fill="none" />
+
+        <!-- Left Eye (Upside Down relative view, large white lens with black border) -->
+        <path d="M -4 -4 C -7 -14 -15 -10 -15 2 C -15 10 -6 8 -2 2 Z" fill="#0B0E14" />
+        <path d="M -5 -3 C -7 -11 -13 -8 -13 1 C -13 7 -6 6 -3 2 Z" fill="url(#eye-glow-radial)" />
+
+        <!-- Right Eye -->
+        <path d="M 4 -4 C 7 -14 15 -10 15 2 C 15 10 6 8 2 2 Z" fill="#0B0E14" />
+        <path d="M 5 -3 C 7 -11 13 -8 13 1 C 13 7 6 6 3 2 Z" fill="url(#eye-glow-radial)" />
+      </g>
+
+    </g>
+  </g>
+</svg>

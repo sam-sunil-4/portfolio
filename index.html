@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="black">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sam Sunil | DevOps & Cloud Infrastructure Engineer</title>
+  <meta name="description" content="DevOps & Cloud Infrastructure Engineer portfolio featuring automated CI/CD pipelines, Kubernetes, Docker, Ansible, AWS, and interactive Spider-Man web physics.">
+  <link rel="canonical" href="https://sam-sunil-4.github.io/">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/favicon.svg">
+  
+  <!-- OpenGraph / Social Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sam-sunil-4.github.io/">
+  <meta property="og:title" content="Sam Sunil | DevOps & Cloud Infrastructure Engineer">
+  <meta property="og:description" content="Automating cloud infrastructure, CI/CD, Kubernetes clusters, and Docker orchestration with superhero precision.">
+  <meta property="og:image" content="https://sam-sunil-4.github.io/assets/og-preview.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://sam-sunil-4.github.io/assets/og-preview.svg">
+  <meta name="theme-color" content="#E62429">
+
+  <!-- Prevent White Flash on Initial Load / Refresh -->
+  <script>
+    (function() {
+      try {
+        var savedTheme = localStorage.getItem('spidey-suit-theme') || 'black';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      } catch(e) {}
+    })();
+  </script>
+  
+  <!-- Google Fonts: Bebas Neue, Space Grotesk, Outfit, Fira Code -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css?v=2.7">
+</head>
+<body>
+
+  <!-- Interactive SpiderWeb Canvas Background -->
+  <canvas id="web-canvas"></canvas>
+
+  <!-- ==========================================================================
+       NAVIGATION BAR
+       ========================================================================== -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-brand" title="Sam DevOps Home">
+        <div class="brand-icon" id="brand-star-icon">
+          <svg viewBox="0 0 100 100" class="star-3d-svg" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="star-light" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FF5252" />
+                <stop offset="100%" stop-color="#E62429" />
+              </linearGradient>
+              <linearGradient id="star-dark" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#990011" />
+                <stop offset="100%" stop-color="#4A0007" />
+              </linearGradient>
+              <linearGradient id="star-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFE082" />
+                <stop offset="50%" stop-color="#FFB300" />
+                <stop offset="100%" stop-color="#E65100" />
+              </linearGradient>
+            </defs>
+            <g class="star-3d-group">
+              <!-- Point 1 (Top) -->
+              <polygon points="50,50 50.0,5.0 38.83,34.63" fill="url(#star-light)" />
+              <polygon points="50,50 50.0,5.0 61.17,34.63" fill="url(#star-dark)" />
+              <!-- Point 2 (Top-Right) -->
+              <polygon points="50,50 81.82,18.18 63.85,41.24" fill="url(#star-light)" />
+              <polygon points="50,50 81.82,18.18 78.01,48.74" fill="url(#star-dark)" />
+              <!-- Point 3 (Right) -->
+              <polygon points="50,50 95.0,50.0 65.37,38.83" fill="url(#star-light)" />
+              <polygon points="50,50 95.0,50.0 65.37,61.17" fill="url(#star-dark)" />
+              <!-- Point 4 (Bottom-Right) -->
+              <polygon points="50,50 81.82,81.82 78.01,51.26" fill="url(#star-light)" />
+              <polygon points="50,50 81.82,81.82 63.85,58.76" fill="url(#star-dark)" />
+              <!-- Point 5 (Bottom) -->
+              <polygon points="50,50 50.0,95.0 61.17,65.37" fill="url(#star-light)" />
+              <polygon points="50,50 50.0,95.0 38.83,65.37" fill="url(#star-dark)" />
+              <!-- Point 6 (Bottom-Left) -->
+              <polygon points="50,50 18.18,81.82 36.15,58.76" fill="url(#star-light)" />
+              <polygon points="50,50 18.18,81.82 21.99,51.26" fill="url(#star-dark)" />
+              <!-- Point 7 (Left) -->
+              <polygon points="50,50 5.0,50.0 34.63,61.17" fill="url(#star-light)" />
+              <polygon points="50,50 5.0,50.0 34.63,38.83" fill="url(#star-dark)" />
+              <!-- Point 8 (Top-Left) -->
+              <polygon points="50,50 18.18,18.18 21.99,48.74" fill="url(#star-light)" />
+              <polygon points="50,50 18.18,18.18 36.15,41.24" fill="url(#star-dark)" />
+              
+              <!-- Center Hub -->
+              <circle cx="50" cy="50" r="10" fill="url(#star-gold)" />
+              <circle cx="50" cy="50" r="5" fill="#FFFFFF" />
+            </g>
+          </svg>
+        </div>
+        <div class="webbed-brand-container">
+          <svg class="brand-spidey-web-overlay" viewBox="0 0 160 50" preserveAspectRatio="none">
+            <path d="M 0,25 Q 40,5 80,25 T 160,25" fill="none" stroke="rgba(230,36,41,0.4)" stroke-width="1" />
+            <path d="M 20,5 L 140,45" fill="none" stroke="rgba(0,229,255,0.3)" stroke-width="0.7" />
+            <path d="M 140,5 L 20,45" fill="none" stroke="rgba(0,229,255,0.3)" stroke-width="0.7" />
+            <path d="M 80,0 L 80,50" fill="none" stroke="rgba(230,36,41,0.5)" stroke-width="0.8" />
+            <circle cx="80" cy="25" r="14" fill="none" stroke="rgba(230,36,41,0.6)" stroke-width="0.8" stroke-dasharray="2,2" />
+            <circle cx="80" cy="25" r="22" fill="none" stroke="rgba(0,229,255,0.4)" stroke-width="0.7" stroke-dasharray="3,3" />
+          </svg>
+          <span class="brand-name-sam">SAM</span>
+          <span class="brand-subtext">DEVOPS</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <ul class="nav-links desktop-only">
+        <li><a href="#hero" class="nav-link active">Suit Status</a></li>
+        <li><a href="#about" class="nav-link">Lore</a></li>
+        <li><a href="#skills" class="nav-link">DevOps Tools</a></li>
+        <li><a href="#projects" class="nav-link">Repos & Missions</a></li>
+        <li><a href="#experience" class="nav-link">Logs</a></li>
+        <li><a href="#contact" class="nav-link">Web-Shooter</a></li>
+      </ul>
+
+      <div class="nav-controls">
+        <!-- Interactive Terminal CLI Trigger -->
+        <button class="nav-action-btn terminal-btn" id="nav-terminal-btn" title="Open Interactive DevOps CLI">
+          <i class="fas fa-terminal"></i> <span>CLI</span>
+        </button>
+
+        <!-- Download CV / Resume Button -->
+        <button class="nav-action-btn resume-btn" id="nav-resume-btn" title="View & Download Resume">
+          <i class="fas fa-file-lines"></i> <span>CV</span>
+        </button>
+
+        <!-- Suit Switcher (Black Spider Dark & Classic Lite) -->
+        <div class="suit-switcher" title="Switch Spider Mode">
+          <button class="suit-btn active" data-suit="black">
+            <i class="fas fa-spider"></i> Black Spider
+          </button>
+          <button class="suit-btn" data-suit="classic">
+            <i class="fas fa-sun"></i> Classic Spidey
+          </button>
+        </div>
+
+        <!-- Audio SFX Toggle -->
+        <button class="sfx-toggle" id="sfx-toggle" title="Toggle Sound Effects">
+          <i class="fas fa-volume-high"></i>
+        </button>
+
+        <!-- Mobile Menu Toggle Button (Hamburger) -->
+        <button class="mobile-menu-toggle mobile-only" id="mobile-menu-toggle" aria-label="Toggle Menu">
+          <i class="fas fa-bars icon-menu"></i>
+          <i class="fas fa-xmark icon-close hidden"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Fullscreen Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+    <div class="mobile-menu-inner">
+      <a href="#hero" class="mobile-nav-link">Suit Status</a>
+      <a href="#about" class="mobile-nav-link">Lore</a>
+      <a href="#skills" class="mobile-nav-link">DevOps Tools</a>
+      <a href="#projects" class="mobile-nav-link">Repos & Missions</a>
+      <a href="#experience" class="mobile-nav-link">Logs</a>
+      <a href="#contact" class="mobile-nav-link">Web-Shooter</a>
+    </div>
+  </div>
+
+  <!-- Floating Right Rail Section Pagination -->
+  <nav class="section-pagination desktop-only" id="section-pagination" aria-label="Page Sections">
+    <a href="#hero" class="page-dot active" data-section="hero" title="Suit Status">
+      <span class="dot-bullet"></span>
+      <span class="dot-label">Suit Status</span>
+    </a>
+    <a href="#about" class="page-dot" data-section="about" title="DevOps Lore">
+      <span class="dot-bullet"></span>
+      <span class="dot-label">Lore</span>
+    </a>
+    <a href="#skills" class="page-dot" data-section="skills" title="DevOps Tools">
+      <span class="dot-bullet"></span>
+      <span class="dot-label">Arsenal</span>
+    </a>
+    <a href="#projects" class="page-dot" data-section="projects" title="Featured Repos">
+      <span class="dot-bullet"></span>
+      <span class="dot-label">Repos</span>
+    </a>
+    <a href="#experience" class="page-dot" data-section="experience" title="Battle Logs">
+      <span class="dot-bullet"></span>
+      <span class="dot-label">Logs</span>
+    </a>
+    <a href="#contact" class="page-dot" data-section="contact" title="Web-Shooter Contact">
+      <span class="dot-bullet"></span>
+      <span class="dot-label">Contact</span>
+    </a>
+  </nav>
+
+  <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+  <section class="hero-section" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        
+        <!-- Left: Hero Text Content -->
+        <div class="hero-content">
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            <span id="display-status">SUIT ONLINE // AWS & KUBERNETES READY</span>
+          </div>
+
+          <h1 class="hero-title">
+            AUTOMATING CLOUD,<br>
+            <span class="name-highlight" id="display-name">SAM SUNIL</span><br>
+            IS HERE!
+          </h1>
+
+          <div class="typing-container">
+            <span id="typing-text">DevOps & Cloud Infrastructure Engineer</span>
+          </div>
+
+          <p class="hero-description" id="display-bio">
+            Architecting high-availability cloud infrastructure, automating CI/CD pipelines, containerizing microservices, and managing AWS/Kubernetes environments. With great automation comes zero downtime!
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn-primary">
+              <i class="fas fa-cubes"></i> Repos & Missions
+            </a>
+            <button class="btn-secondary terminal-trigger" id="hero-terminal-btn">
+              <i class="fas fa-terminal"></i> Launch CLI
+            </button>
+            <button class="btn-secondary resume-trigger" id="hero-resume-btn">
+              <i class="fas fa-file-arrow-down"></i> Resume CV
+            </button>
+            <a href="https://github.com/sam-sunil-4" target="_blank" class="btn-icon-link" title="GitHub Profile">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: 3D Living Spider-Man Hero Stage -->
+        <div class="hero-spidey-wrapper" id="hero-spidey-wrapper">
+          <div class="hero-stage-container" id="hero-stage">
+            <!-- Holographic Pedestal Floor Rings -->
+            <div class="hero-stage-pedestal">
+              <div class="pedestal-ring inner-ring"></div>
+              <div class="pedestal-ring middle-ring"></div>
+              <div class="pedestal-ring outer-ring"></div>
+              <div class="pedestal-glow"></div>
+            </div>
+
+            <!-- Open 3D Spider-Man Hero Character -->
+            <div class="hero-character-wrapper" id="hero-character-wrapper">
+              <img src="assets/spiderman_hero_4k_cutout.png" alt="Sam Sunil DevOps Superhero - Spider-Man Suit 3D Hologram" id="hero-spidey-main-img" class="hero-main-spidey-img" decoding="async" fetchpriority="high" />
+            </div>
+
+            <!-- Interactive HUD Capsule -->
+            <div class="hero-hud-capsule" id="hero-hud-capsule">
+              <div class="hud-beacon-group">
+                <span class="hud-beacon-dot"></span>
+                <span class="hud-beacon-text">SUIT ONLINE // DEVOPS ARMED</span>
+              </div>
+              <div class="hud-sub-text"><i class="fas fa-spider"></i> Click Spidey to Web-Shoot</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       HERO LORE / ABOUT SECTION
+       ========================================================================== -->
+  <section class="section" id="about">
+    <!-- Cinematic Swinging Spider-Man on Web Strand -->
+    <div class="section-spidey-hero lore-spidey-hero" id="lore-spidey-hero">
+      <svg class="lore-web-thread-svg" viewBox="0 0 100 240" preserveAspectRatio="none">
+        <line x1="85" y1="0" x2="30" y2="150" stroke="rgba(255, 255, 255, 0.85)" stroke-width="2" stroke-dasharray="4,2" filter="drop-shadow(0 0 8px #00E5FF)"/>
+      </svg>
+      <img src="assets/Spiderman-Picture-PNG-HD.png" alt="Spider-Man Swinging on Web Strand - Agile DevOps Automation" class="lore-spidey-img" loading="lazy" decoding="async" />
+    </div>
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// DEVOPS LORE</span>
+        <h2 class="section-title">WITH GREAT AUTOMATION COMES ZERO DOWNTIME</h2>
+      </div>
+
+      <div class="about-card">
+        <p id="about-narrative">
+          DevOps & Cloud Infrastructure Engineer with 5 years of hands-on experience in cloud infrastructure, Kubernetes, CI/CD automation, and Infrastructure as Code. Experienced in designing and managing scalable AWS environments, orchestrating containerized workloads, automating deployments and infrastructure provisioning, and building reliable CI/CD pipelines. Strong focus on automation, system reliability, security, and operational efficiency, with a proven ability to streamline complex DevOps processes and bridge the gap between development and operations with superhero agility.
+        </p>
+
+        <div class="unmasked-stats">
+          <div class="mini-stat">
+            <div class="stat-num">AWS / GCP</div>
+            <div class="stat-lbl">Cloud Platforms</div>
+          </div>
+          <div class="mini-stat">
+            <div class="stat-num">Docker</div>
+            <div class="stat-lbl">Containerization</div>
+          </div>
+          <div class="mini-stat">
+            <div class="stat-num">Terraform</div>
+            <div class="stat-lbl">IaC Automation</div>
+          </div>
+          <div class="mini-stat">
+            <div class="stat-num">Kubernetes</div>
+            <div class="stat-lbl">Orchestration</div>
+          </div>
+        </div>
+
+        <!-- Official Cloud Certification Badge -->
+        <div class="cert-badge-strip">
+          <div class="cert-badge-item">
+            <i class="fab fa-google" style="color: #4285F4; font-size: 1.3rem;"></i>
+            <div>
+              <strong style="color: #FFF; display: block; font-family: var(--font-subheading); font-size: 0.95rem;">Google Cloud Certified — Associate Cloud Engineer (GCP ACE)</strong>
+              <span style="color: var(--text-muted); font-size: 0.8rem;">Verified Cloud Architecture &amp; Kubernetes Deployment Credential</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SKILLS & DEVOPS ARSENAL MATRIX
+       ========================================================================== -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// DEVOPS ARSENAL</span>
+        <h2 class="section-title">INFRASTRUCTURE & AUTOMATION GADGETS</h2>
+      </div>
+
+      <div class="skills-tabs">
+        <button class="skills-tab-btn active" data-filter="all">All Stack</button>
+        <button class="skills-tab-btn" data-filter="cloud">Cloud & Infra</button>
+        <button class="skills-tab-btn" data-filter="automation">CI/CD & Automation</button>
+        <button class="skills-tab-btn" data-filter="linux">Scripting & Linux</button>
+      </div>
+
+      <div class="skills-grid" id="skills-grid">
+        <!-- Skill Cards Populated via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       MISSION ARCHIVES (GITHUB REPOS & PROJECTS)
+       ========================================================================== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// REPOSITORY LOGS</span>
+        <h2 class="section-title">FEATURED GITHUB REPOSITORIES</h2>
+      </div>
+
+      <div class="projects-grid" id="projects-grid">
+        <!-- Project Cards Populated via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       BATTLE LOGS (DEVOPS EXPERIENCE)
+       ========================================================================== -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// TIMELINE</span>
+        <h2 class="section-title">INFRASTRUCTURE BATTLE LOGS</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-date">2026 FEB — PRESENT</div>
+            <h3 class="timeline-role">Product Engineer — DevOps</h3>
+            <div class="timeline-company"><i class="fas fa-building"></i> IBS Software</div>
+            <p style="color: var(--text-secondary);">Spearheading cloud infrastructure architecture, containerized microservices orchestration, automated CI/CD deployment pipelines, and high-availability enterprise SaaS product reliability.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-date">2023 NOV — 2026 JAN</div>
+            <h3 class="timeline-role">CloudOps Engineer</h3>
+            <div class="timeline-company"><i class="fas fa-cloud"></i> QBurst</div>
+            <p style="color: var(--text-secondary);">Managed multi-cloud (AWS & GCP) infrastructure operations, automated provisioning with Terraform & Ansible, established 24/7 observability and incident response, and optimized cloud workload performance.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-date">2021 SEP — 2023 NOV</div>
+            <h3 class="timeline-role">System Administrator ➔ DevOps / SRE</h3>
+            <div class="timeline-company"><i class="fas fa-server"></i> Supportsages Consultancy Pvt Ltd</div>
+            <p style="color: var(--text-secondary);">Commenced as Linux Systems Administrator managing enterprise server fleets and web hosting clusters; promoted to DevOps/SRE focusing on automated Bash tooling, backup disaster recovery, and infrastructure reliability.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       WEB-SHOOTER CONTACT SECTION
+       ========================================================================== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// GET IN TOUCH</span>
+        <h2 class="section-title">LAUNCH A WEB-SHOOTER MESSAGE</h2>
+      </div>
+
+      <div class="contact-container">
+        
+        <!-- Contact Info -->
+        <div class="contact-info-card">
+          <h3 style="font-family: var(--font-heading); font-size: 2rem; margin-bottom: 1.5rem;">DIRECT SIGNAL</h3>
+          
+          <div class="contact-method">
+            <div class="contact-icon-box"><i class="fas fa-paper-plane"></i></div>
+            <div>
+              <div style="font-size: 0.8rem; color: var(--text-muted);">DIRECT WEB DISPATCH</div>
+              <div style="font-family: var(--font-subheading); font-size: 1.05rem; color: var(--text-primary);">Fill the form & Spidey will swing back to you ASAP! 🕷️</div>
+            </div>
+          </div>
+
+          <div class="contact-method">
+            <div class="contact-icon-box"><i class="fas fa-location-dot"></i></div>
+            <div>
+              <div style="font-size: 0.8rem; color: var(--text-muted);">BASE LOCATION</div>
+              <div style="font-family: var(--font-subheading); font-size: 1.1rem;" id="contact-location">Alappuzha, Kerala, India</div>
+            </div>
+          </div>
+
+          <div class="contact-method">
+            <div class="contact-icon-box"><i class="fab fa-linkedin" style="color: #0077B5;"></i></div>
+            <div>
+              <div style="font-size: 0.8rem; color: var(--text-muted);">LINKEDIN PROFILE</div>
+              <a href="https://www.linkedin.com/in/sam-sunil-4b50a4201" target="_blank" style="color: var(--spidey-blue-light); text-decoration: none; font-family: var(--font-subheading);" id="contact-linkedin">linkedin.com/in/sam-sunil</a>
+            </div>
+          </div>
+
+          <div class="contact-method">
+            <div class="contact-icon-box"><i class="fab fa-github"></i></div>
+            <div>
+              <div style="font-size: 0.8rem; color: var(--text-muted);">GITHUB REPOSITORY</div>
+              <a href="https://github.com/sam-sunil-4" target="_blank" style="color: var(--spidey-blue-light); text-decoration: none; font-family: var(--font-subheading);" id="contact-github">github.com/sam-sunil-4</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <form class="contact-info-card contact-form" id="contact-form" action="https://formsubmit.co/f294248d19db4797d2d7bddae0542434" method="POST" novalidate>
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_subject" value="🕸️ New DevOps Signal from Portfolio">
+          
+          <div class="form-group">
+            <label for="sender-name"><i class="fas fa-user-astronaut"></i> Your Name</label>
+            <input type="text" id="sender-name" name="name" class="form-control" placeholder="Peter Parker" autocomplete="name" required>
+            <div class="form-error-msg" id="error-sender-name"><i class="fas fa-circle-exclamation"></i> <span>Please enter your name (at least 2 letters).</span></div>
+          </div>
+
+          <div class="form-group">
+            <label for="sender-email"><i class="fas fa-envelope"></i> Your Email (.com or .in only)</label>
+            <input type="email" id="sender-email" name="email" class="form-control" placeholder="peter@dailybugle.com" autocomplete="email" required>
+            <div class="form-error-msg" id="error-sender-email"><i class="fas fa-circle-exclamation"></i> <span>Please enter a valid email ending with .com or .in</span></div>
+          </div>
+
+          <div class="form-group">
+            <label for="sender-message"><i class="fas fa-comment-dots"></i> Message</label>
+            <textarea id="sender-message" name="message" class="form-control" placeholder="Hey Sam! Loved your DevOps Spider-Man portfolio. Let's discuss cloud infrastructure & automation!" required></textarea>
+            <div class="form-error-msg" id="error-sender-message"><i class="fas fa-circle-exclamation"></i> <span>Please enter a message (at least 10 characters).</span></div>
+          </div>
+
+          <button type="submit" class="btn-primary" id="btn-submit-signal" style="justify-content: center; width: 100%;">
+            <i class="fas fa-paper-plane" style="font-size: 1.1rem;"></i> <span id="btn-submit-text">TRANSMIT WEB SIGNAL</span>
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Sticky Mobile Quick Action Bar (Visible on Mobile Screens) -->
+  <nav class="mobile-sticky-cta" id="mobile-sticky-cta" aria-label="Mobile Quick Actions">
+    <a href="#contact" class="mobile-cta-btn primary"><i class="fas fa-paper-plane"></i> Web Signal</a>
+    <button class="mobile-cta-btn" id="mobile-sticky-cli-btn"><i class="fas fa-terminal"></i> CLI HUD</button>
+    <button class="mobile-cta-btn" id="mobile-sticky-cv-btn"><i class="fas fa-file-lines"></i> CV Dossier</button>
+    <a href="https://github.com/sam-sunil-4" target="_blank" class="mobile-cta-btn"><i class="fab fa-github"></i> Repos</a>
+  </nav>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <p>&copy; 2026 Sam Sunil | DevOps &amp; Cloud Infrastructure Engineer | Built with Web-Slinging Automation</p>
+      <div class="footer-links">
+        <a href="terms.html" class="footer-link"><i class="fas fa-file-contract"></i> Terms &amp; Privacy</a>
+        <span class="footer-dot">•</span>
+        <button id="footer-cookie-btn" class="footer-link-btn"><i class="fas fa-cookie-bite"></i> Cookie Preferences</button>
+        <span class="footer-dot">•</span>
+        <a href="https://www.linkedin.com/in/sam-sunil-4b50a4201" target="_blank" class="footer-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <span class="footer-dot">•</span>
+        <a href="https://github.com/sam-sunil-4" target="_blank" class="footer-link"><i class="fab fa-github"></i> GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       1. INTERACTIVE DEVOPS CYBER TERMINAL (CLI HUD)
+       ========================================================================== -->
+  <div class="terminal-modal-overlay" id="terminal-modal-overlay">
+    <div class="terminal-window" id="terminal-window">
+      <!-- Terminal Header Bar -->
+      <div class="terminal-header">
+        <div class="terminal-traffic-lights">
+          <span class="traffic-light close" id="terminal-close-btn" title="Close CLI"></span>
+          <span class="traffic-light min" id="terminal-min-btn" title="Minimize CLI"></span>
+          <span class="traffic-light max" id="terminal-max-btn" title="Maximize CLI"></span>
+        </div>
+        <div class="terminal-title">
+          <i class="fas fa-terminal"></i> sam@spidey-devops-cluster: ~ (zsh)
+        </div>
+        <div class="terminal-status-indicator">
+          <span class="pulse-indicator"></span> LIVE
+        </div>
+      </div>
+
+      <!-- Quick Command Quick-Chips -->
+      <div class="terminal-quick-chips">
+        <button class="chip-btn" data-cmd="help"><i class="fas fa-question-circle"></i> help</button>
+        <button class="chip-btn" data-cmd="skills"><i class="fas fa-cubes"></i> skills</button>
+        <button class="chip-btn" data-cmd="repos"><i class="fab fa-github"></i> repos</button>
+        <button class="chip-btn" data-cmd="career"><i class="fas fa-timeline"></i> career</button>
+        <button class="chip-btn" data-cmd="cv"><i class="fas fa-file-lines"></i> cv</button>
+        <button class="chip-btn" data-cmd="theme classic"><i class="fas fa-sun"></i> classic</button>
+        <button class="chip-btn" data-cmd="theme black"><i class="fas fa-spider"></i> black</button>
+        <button class="chip-btn" data-cmd="clear"><i class="fas fa-eraser"></i> clear</button>
+      </div>
+
+      <!-- Terminal Body / Output Stream -->
+      <div class="terminal-body" id="terminal-body">
+        <div class="terminal-line banner">
+          <div class="terminal-banner-box">
+            <div class="terminal-banner-title">S P I D E Y &nbsp;&nbsp; D E V O P S &nbsp;&nbsp; C L I</div>
+            <div class="terminal-banner-sub">P O R T F O L I O &nbsp;&nbsp; C O N S O L E &nbsp;&nbsp; v 2 . 4</div>
+          </div>
+          <div class="welcome-text">
+            <span>Welcome to Sam Sunil's interactive portfolio console.</span><br>
+            <span>Type <strong class="highlight-cmd">'help'</strong> to list portfolio options, or click any chip above.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Terminal Input Line -->
+      <div class="terminal-input-row">
+        <span class="prompt-user">sam@spidey-devops</span>:<span class="prompt-dir">~</span><span class="prompt-symbol">$</span>
+        <input type="text" id="terminal-input" class="terminal-input" placeholder="Type a command (e.g. 'help', 'skills', 'repos', 'career')..." autocomplete="off" spellcheck="false" autofocus />
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       2. ARCHITECTURE DEEP-DIVE BLUEPRINT MODAL
+       ========================================================================== -->
+  <div class="arch-modal-overlay" id="arch-modal-overlay">
+    <div class="arch-modal-card">
+      <div class="arch-modal-header">
+        <div>
+          <span class="arch-badge" id="arch-modal-badge">CLOUD BLUEPRINT</span>
+          <h3 class="arch-modal-title" id="arch-modal-title">Infrastructure Architecture</h3>
+        </div>
+        <button class="arch-close-btn" id="arch-modal-close-btn">&times;</button>
+      </div>
+      <div class="arch-modal-body" id="arch-modal-body">
+        <!-- Injected Dynamically by script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       3. RESUME / CV DOSSIER MODAL
+       ========================================================================== -->
+  <div class="resume-modal-overlay" id="resume-modal-overlay">
+    <div class="resume-modal-card">
+      <div class="resume-modal-header">
+        <div>
+          <div style="color: var(--spidey-red); font-family: var(--font-subheading); font-size: 0.8rem; font-weight: 700; letter-spacing: 2px;">// DEVOPS CREDENTIALS</div>
+          <h3 style="color: #FFF; font-family: var(--font-heading); font-size: 1.8rem; letter-spacing: 2px;">SAM SUNIL — RESUME DOSSIER</h3>
+        </div>
+        <button class="resume-close-btn" id="resume-modal-close-btn">&times;</button>
+      </div>
+
+      <div class="resume-modal-body">
+        <div class="resume-highlight-grid">
+          <div class="resume-box">
+            <h4><i class="fas fa-briefcase"></i> Current Role</h4>
+            <p><strong>Product Engineer — DevOps</strong> at <strong>IBS Software</strong> (2026 Feb — Present)</p>
+          </div>
+          <div class="resume-box">
+            <h4><i class="fas fa-chart-line"></i> Total Experience</h4>
+            <p><strong>4+ Years</strong> in DevOps, CloudOps, SRE &amp; Linux Infrastructure</p>
+          </div>
+          <div class="resume-box">
+            <h4><i class="fas fa-layer-group"></i> Core Stack</h4>
+            <p>AWS, GCP, Kubernetes (K8s), Docker, Terraform, Ansible, CI/CD, Python, Bash</p>
+          </div>
+          <div class="resume-box">
+            <h4><i class="fas fa-certificate" style="color: #4285F4;"></i> Cloud Certification</h4>
+            <p><strong style="color: #FFF;">Google Cloud Certified</strong> — Associate Cloud Engineer (GCP ACE)</p>
+          </div>
+        </div>
+
+        <div class="resume-actions-bar">
+          <a href="#contact" class="btn-primary resume-action-btn" id="resume-contact-btn">
+            <i class="fas fa-paper-plane"></i> Contact Directly
+          </a>
+          <a href="assets/Sam_Sunil_DevOps_Resume.pdf" download="Sam_Sunil_DevOps_Resume.pdf" class="btn-secondary resume-action-btn" id="resume-download-btn">
+            <i class="fas fa-file-arrow-down"></i> Download PDF CV
+          </a>
+          <a href="https://github.com/sam-sunil-4" target="_blank" class="btn-secondary resume-action-btn">
+            <i class="fab fa-github"></i> View GitHub Repos
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       4. SPIDEY-SENSE COOKIE CONSENT RADAR (HUD)
+       ========================================================================== -->
+  <div class="cookie-hud" id="cookie-consent-hud">
+    <div class="cookie-hud-content">
+      <div class="cookie-hud-icon"><i class="fas fa-cookie-bite"></i></div>
+      <div class="cookie-hud-text">
+        <strong>Spidey-Sense Cookie Radar 🍪</strong>
+        <p>We use essential local storage to remember your Suit Mode (Black vs Classic) and audio SFX preferences. Zero ad trackers!</p>
+      </div>
+      <div class="cookie-hud-actions">
+        <button class="btn-cookie-primary" id="cookie-accept-all-btn"><i class="fas fa-check"></i> Accept All</button>
+        <button class="btn-cookie-secondary" id="cookie-essential-btn">Essential Only</button>
+        <button class="btn-cookie-text" id="cookie-prefs-open-btn"><i class="fas fa-sliders"></i> Preferences</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cookie Preferences Customization Modal -->
+  <div class="cookie-modal-overlay" id="cookie-modal-overlay">
+    <div class="cookie-modal-card">
+      <div class="cookie-modal-header">
+        <h3 style="color: #FFF; font-family: var(--font-subheading); font-size: 1.25rem;"><i class="fas fa-sliders" style="color: var(--spidey-red);"></i> Cookie &amp; Storage Preferences</h3>
+        <button class="cookie-close-btn" id="cookie-modal-close-btn">&times;</button>
+      </div>
+      <div class="cookie-modal-body">
+        <div class="cookie-pref-item">
+          <div>
+            <strong style="color: #FFF; display: block; margin-bottom: 0.2rem;">Essential &amp; Functional (Strictly Required)</strong>
+            <span style="color: var(--text-muted); font-size: 0.83rem;">Required for Spider-Man suit theme persistence and navigation.</span>
+          </div>
+          <span style="color: #3FB950; font-family: 'Fira Code', monospace; font-size: 0.8rem; font-weight: 700;">ALWAYS ACTIVE</span>
+        </div>
+
+        <div class="cookie-pref-item">
+          <div>
+            <strong style="color: #FFF; display: block; margin-bottom: 0.2rem;">Audio SFX &amp; 3D Physics State</strong>
+            <span style="color: var(--text-muted); font-size: 0.83rem;">Preserves web-shooter sound effect and 3D particle state in local storage.</span>
+          </div>
+          <label class="switch-toggle">
+            <input type="checkbox" id="pref-sfx-storage" checked>
+            <span class="slider-round"></span>
+          </label>
+        </div>
+
+        <div class="cookie-pref-item">
+          <div>
+            <strong style="color: #FFF; display: block; margin-bottom: 0.2rem;">Anonymous Traffic Metrics</strong>
+            <span style="color: var(--text-muted); font-size: 0.83rem;">Helps optimize cloud hosting performance without personal tracking.</span>
+          </div>
+          <label class="switch-toggle">
+            <input type="checkbox" id="pref-analytics-storage" checked>
+            <span class="slider-round"></span>
+          </label>
+        </div>
+      </div>
+      <div class="cookie-modal-footer">
+        <button class="btn-primary" id="cookie-save-prefs-btn" style="width: 100%; justify-content: center;">
+          <i class="fas fa-shield-halved"></i> Save Radar Preferences
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- High-Tech Centered Spider-Man Alert Modal Popup -->
+  <div class="spidey-modal-overlay" id="spidey-modal-overlay">
+    <div class="spidey-modal-card">
+      <div class="spidey-modal-web-icon">
+        <i class="fas fa-spider"></i>
+      </div>
+      <h3 class="spidey-modal-title" id="spidey-modal-title">WEB SIGNAL TRANSMITTED! 🕸️</h3>
+      <p class="spidey-modal-body" id="spidey-modal-body">Web Message Shot Successfully! Spider-Man will get back to you shortly.</p>
+      <button class="spidey-modal-btn" id="spidey-modal-close-btn">
+        <i class="fas fa-check"></i> ACKNOWLEDGE SIGNAL
+      </button>
+    </div>
+  </div>
+
+  <!-- Three.js 3D WebGL Library for Holographic Cyber Animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- GSAP & Plugins for Silky Smooth Superhero Animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Custom JavaScript Logic -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="fav-light" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF5252" />
+      <stop offset="100%" stop-color="#E62429" />
+    </linearGradient>
+    <linearGradient id="fav-dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#990011" />
+      <stop offset="100%" stop-color="#4A0007" />
+    </linearGradient>
+    <linearGradient id="fav-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE082" />
+      <stop offset="50%" stop-color="#FFB300" />
+      <stop offset="100%" stop-color="#E65100" />
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="20" fill="#0D1117"/>
+  <g>
+    <!-- Point 1 (Top) -->
+    <polygon points="50,50 50.0,10.0 38.83,37.63" fill="url(#fav-light)" />
+    <polygon points="50,50 50.0,10.0 61.17,37.63" fill="url(#fav-dark)" />
+    <!-- Point 2 (Top-Right) -->
+    <polygon points="50,50 78.82,21.18 62.85,42.24" fill="url(#fav-light)" />
+    <polygon points="50,50 78.82,21.18 75.01,48.74" fill="url(#fav-dark)" />
+    <!-- Point 3 (Right) -->
+    <polygon points="50,50 90.0,50.0 63.37,39.83" fill="url(#fav-light)" />
+    <polygon points="50,50 90.0,50.0 63.37,60.17" fill="url(#fav-dark)" />
+    <!-- Point 4 (Bottom-Right) -->
+    <polygon points="50,50 78.82,78.82 75.01,51.26" fill="url(#fav-light)" />
+    <polygon points="50,50 78.82,78.82 62.85,57.76" fill="url(#fav-dark)" />
+    <!-- Point 5 (Bottom) -->
+    <polygon points="50,50 50.0,90.0 61.17,62.37" fill="url(#fav-light)" />
+    <polygon points="50,50 50.0,90.0 38.83,62.37" fill="url(#fav-dark)" />
+    <!-- Point 6 (Bottom-Left) -->
+    <polygon points="50,50 21.18,78.82 37.15,57.76" fill="url(#fav-light)" />
+    <polygon points="50,50 21.18,78.82 24.99,51.26" fill="url(#fav-dark)" />
+    <!-- Point 7 (Left) -->
+    <polygon points="50,50 10.0,50.0 36.63,60.17" fill="url(#fav-light)" />
+    <polygon points="50,50 10.0,50.0 36.63,39.83" fill="url(#fav-dark)" />
+    <!-- Point 8 (Top-Left) -->
+    <polygon points="50,50 21.18,21.18 24.99,48.74" fill="url(#fav-light)" />
+    <polygon points="50,50 21.18,21.18 37.15,42.24" fill="url(#fav-dark)" />
+    <!-- Center Hub -->
+    <circle cx="50" cy="50" r="9" fill="url(#fav-gold)" />
+    <circle cx="50" cy="50" r="4.5" fill="#FFFFFF" />
+  </g>
+</svg>

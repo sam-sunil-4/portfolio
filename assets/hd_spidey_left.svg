@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 420" id="hd-spidey-left-svg">
+  <defs>
+    <!-- HD Suit Metallic Gradients -->
+    <radialGradient id="hd-red-suit" cx="40%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#FF3843"/>
+      <stop offset="50%" stop-color="#D60E15"/>
+      <stop offset="85%" stop-color="#800308"/>
+      <stop offset="100%" stop-color="#4A0004"/>
+    </radialGradient>
+
+    <radialGradient id="hd-blue-suit" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#0084FF"/>
+      <stop offset="60%" stop-color="#0046A6"/>
+      <stop offset="100%" stop-color="#001F52"/>
+    </radialGradient>
+
+    <linearGradient id="hd-web-line" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.95)"/>
+      <stop offset="50%" stop-color="rgba(0,229,255,0.8)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.9)"/>
+    </linearGradient>
+
+    <linearGradient id="hd-lens-rim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#333745"/>
+      <stop offset="50%" stop-color="#0F1117"/>
+      <stop offset="100%" stop-color="#1A1C24"/>
+    </linearGradient>
+
+    <radialGradient id="hd-lens-glass" cx="35%" cy="25%" r="75%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="35%" stop-color="#EDF4FA"/>
+      <stop offset="70%" stop-color="#B8D3EB"/>
+      <stop offset="100%" stop-color="#6088AB"/>
+    </radialGradient>
+
+    <!-- Glowing Filters -->
+    <filter id="hd-spidey-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="rgba(214, 14, 21, 0.45)" />
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="rgba(0, 0, 0, 0.8)" />
+    </filter>
+
+    <filter id="hd-eye-lens-glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g filter="url(#hd-spidey-glow)">
+    <!-- Hanging Web Thread -->
+    <line x1="100" y1="0" x2="100" y2="140" stroke="url(#hd-web-line)" stroke-width="2.5" stroke-linecap="round" />
+    <circle cx="100" cy="140" r="4" fill="#00E5FF" />
+
+    <!-- Spider-Man Upside-Down Hanging Body -->
+    <g transform="translate(100, 140)">
+      
+      <!-- Hand 1 (Gripping Web) -->
+      <path d="M -6 -2 C -10 4, -4 12, 0 10 C 6 12, 10 4, 6 -2 Z" fill="url(#hd-red-suit)" stroke="#111" stroke-width="1" />
+
+      <!-- Left & Right Arm Sleeves (Red & Blue Webbed Muscle Texture) -->
+      <path d="M -5 5 C -25 25 -32 50 -20 75 L -10 70 C -20 50 -15 30 -2 5 Z" fill="url(#hd-red-suit)" />
+      <path d="M 5 5 C 25 25 32 50 20 75 L 10 70 C 20 50 15 30 2 5 Z" fill="url(#hd-red-suit)" />
+
+      <!-- Torso (Upside Down Superhero V-Shape Taper) -->
+      <!-- Outer Blue Suit Side Panels -->
+      <path d="M -24 70 C -34 95 -30 120 -18 145 L 18 145 C 30 120 34 95 24 70 Z" fill="url(#hd-blue-suit)" />
+      
+      <!-- Center Red Chest & Webbing Lines -->
+      <path d="M -16 65 C -18 90 -14 120 -10 145 L 10 145 C 14 120 18 90 16 65 Z" fill="url(#hd-red-suit)" />
+      
+      <!-- Webbing Overlay on Chest -->
+      <path d="M 0 65 L 0 145 M -12 75 Q 0 85 12 75 M -14 95 Q 0 105 14 95 M -12 115 Q 0 125 12 115 M -10 135 Q 0 142 10 135" 
+            stroke="rgba(10, 12, 18, 0.6)" stroke-width="1.8" fill="none" />
+
+      <!-- Spider Emblem on Chest -->
+      <path d="M 0 92 L -4 100 L 0 110 L 4 100 Z" fill="#0A0D14" />
+      <path d="M 0 98 L -14 90 M 0 98 L 14 90 M 0 102 L -15 114 M 0 102 L 15 114" stroke="#0A0D14" stroke-width="2" stroke-linecap="round" />
+
+      <!-- Upside Down Legs (Acromatic Athletic Pose) -->
+      <!-- Left Leg (Bent Knee outwards) -->
+      <path d="M -18 145 C -42 175 -48 210 -28 245 C -20 260 -10 275 0 290" stroke="url(#hd-blue-suit)" stroke-width="14" stroke-linecap="round" fill="none" />
+      <path d="M -28 245 C -20 260 -10 275 0 290" stroke="url(#hd-red-suit)" stroke-width="14" stroke-linecap="round" fill="none" />
+
+      <!-- Right Leg (Tucked behind) -->
+      <path d="M 18 145 C 38 170 42 200 30 230 C 22 248 26 265 32 280" stroke="url(#hd-blue-suit)" stroke-width="14" stroke-linecap="round" fill="none" />
+      <path d="M 30 230 C 22 248 26 265 32 280" stroke="url(#hd-red-suit)" stroke-width="14" stroke-linecap="round" fill="none" />
+
+      <!-- HD Spider-Man Mask Head (At bottom y=175) -->
+      <g transform="translate(0, 175)">
+        <!-- Head Base contour -->
+        <path d="M 0 -28 C -22 -28 -28 -5 -26 18 C -24 38 -14 54 0 58 C 14 54 24 38 26 18 C 28 -5 22 -28 0 -28 Z" 
+              fill="url(#hd-red-suit)" stroke="#0A0D14" stroke-width="2.5" />
+
+        <!-- Webbing Lines on Mask -->
+        <g stroke="rgba(10, 12, 18, 0.55)" stroke-width="1.5" fill="none">
+          <path d="M 0 -28 L 0 58 M -26 0 L 26 0" />
+          <path d="M -18 -18 Q 0 -10 18 -18 M -24 -6 Q 0 4 24 -6 M -24 10 Q 0 20 24 10 M -18 28 Q 0 38 18 28" />
+        </g>
+
+        <!-- Left Eye (High-Def Expressive Lens with Metallic Border & Glow) -->
+        <g transform="translate(-11, 2)">
+          <path d="M 0 -16 C -6 -24 -16 -18 -16 2 C -16 16 -5 14 0 4 Z" fill="url(#hd-lens-rim)" stroke="#0A0D14" stroke-width="2" />
+          <path d="M -2 -14 C -7 -20 -14 -15 -14 2 C -14 13 -6 11 -2 4 Z" fill="url(#hd-lens-glass)" filter="url(#hd-eye-lens-glow)" />
+        </g>
+
+        <!-- Right Eye -->
+        <g transform="translate(11, 2)">
+          <path d="M 0 -16 C 6 -24 16 -18 16 2 C 16 16 5 14 0 4 Z" fill="url(#hd-lens-rim)" stroke="#0A0D14" stroke-width="2" />
+          <path d="M 2 -14 C 7 -20 14 -15 14 2 C 14 13 6 11 2 4 Z" fill="url(#hd-lens-glass)" filter="url(#hd-eye-lens-glow)" />
+        </g>
+      </g>
+
+    </g>
+  </g>
+</svg>

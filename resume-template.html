@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sam Sunil - DevOps &amp; Site Reliability Engineer Resume</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 10mm 13mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: #1A202C;
+      background: #FFF;
+      line-height: 1.35;
+      font-size: 9pt;
+    }
+
+    .header {
+      text-align: center;
+      border-bottom: 2px solid #2B6CB0;
+      padding-bottom: 6px;
+      margin-bottom: 8px;
+    }
+
+    .name {
+      font-size: 19pt;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      color: #1A365D;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .title {
+      font-size: 10.5pt;
+      font-weight: 700;
+      color: #2B6CB0;
+      margin-bottom: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+
+    .tagline {
+      font-size: 8.8pt;
+      font-weight: 600;
+      color: #4A5568;
+      margin-bottom: 4px;
+      letter-spacing: 0.4px;
+    }
+
+    .contact-info {
+      font-size: 8.5pt;
+      color: #4A5568;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 4px 8px;
+    }
+
+    .contact-info a {
+      color: #2B6CB0;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .section {
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-size: 9.8pt;
+      font-weight: 800;
+      color: #1A365D;
+      text-transform: uppercase;
+      border-bottom: 1px solid #CBD5E0;
+      padding-bottom: 1.5px;
+      margin-bottom: 4px;
+      letter-spacing: 0.5px;
+    }
+
+    .summary-text {
+      color: #2D3748;
+      font-size: 8.8pt;
+      line-height: 1.35;
+      text-align: justify;
+    }
+
+    .skills-grid {
+      display: table;
+      width: 100%;
+      font-size: 8.6pt;
+    }
+
+    .skills-row {
+      display: table-row;
+    }
+
+    .skills-category {
+      display: table-cell;
+      font-weight: 700;
+      color: #2C5282;
+      width: 25%;
+      padding: 1.2px 0;
+    }
+
+    .skills-list {
+      display: table-cell;
+      color: #2D3748;
+      width: 75%;
+      padding: 1.2px 0;
+    }
+
+    .item {
+      margin-bottom: 6px;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1.5px;
+    }
+
+    .item-title {
+      font-weight: 700;
+      font-size: 9.2pt;
+      color: #1A202C;
+    }
+
+    .item-role {
+      font-weight: 600;
+      color: #2B6CB0;
+    }
+
+    .item-date {
+      font-size: 8.4pt;
+      color: #718096;
+      font-weight: 600;
+    }
+
+    ul.bullets {
+      list-style-type: disc;
+      padding-left: 14px;
+      margin-top: 1.5px;
+    }
+
+    ul.bullets li {
+      color: #2D3748;
+      font-size: 8.6pt;
+      line-height: 1.32;
+      margin-bottom: 2px;
+    }
+
+    ul.bullets li strong {
+      color: #1A202C;
+    }
+
+    .two-col-grid {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .two-col-grid .col {
+      flex: 1;
+    }
+
+    .cert-item,
+    .edu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 8.8pt;
+      margin-bottom: 3px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <h1 class="name">Sam Sunil</h1>
+    <div class="title">DevOps &amp; Site Reliability Engineer</div>
+    <div class="tagline">AWS | CI/CD | Docker | Kubernetes | Terraform | GCP | Linux</div>
+    <div class="contact-info">
+      <span>📍 Alappuzha, Kerala, India</span>
+      <span>•</span>
+      <span>📞 +91 9048592292</span>
+      <span>•</span>
+      <span>✉️ <a href="mailto:sam.sunil@hotmail.com">sam.sunil@hotmail.com</a></span>
+      <span>•</span>
+      <span>🔗 <a href="https://linkedin.com/in/sam-sunil" target="_blank">linkedin.com/in/sam-sunil</a></span>
+      <span>•</span>
+      <span>💻 <a href="https://github.com/sam-sunil-4" target="_blank">github.com/sam-sunil-4</a></span>
+      <span>•</span>
+      <span>📝 <a href="https://medium.com/@samsunil9061" target="_blank">medium.com/@samsunil9061</a></span>
+      <span>•</span>
+      <span>🌐 <a href="https://sam-sunil.vercel.app" target="_blank">sam-sunil.vercel.app</a></span>
+    </div>
+  </header>
+
+  <!-- Professional Summary -->
+  <section class="section">
+    <h2 class="section-title">Professional Summary</h2>
+    <p class="summary-text">
+      Certified <strong>DevOps &amp; Site Reliability Engineer</strong> with 4+ years of experience leading CI/CD
+      modernization projects that reduced deployment times by <strong>30%–45%</strong> and managing cloud-native
+      infrastructure supporting <strong>99.99% uptime</strong> across AWS and GCP using <strong>Kubernetes, Docker,
+        Terraform, and Ansible</strong>. Adept at implementing end-to-end automated CI/CD pipelines (Jenkins, GitHub
+      Actions, AWS CodePipeline, GitLab), automating operational workflows using Python &amp; Bash, improving system
+      availability, latency, and performance metrics, and leading root cause analysis (RCA) and post-mortem incident
+      response. Certified <strong>Google Cloud Associate Cloud Engineer (GCP ACE)</strong>.
+    </p>
+  </section>
+
+  <!-- Core Competencies -->
+  <section class="section">
+    <h2 class="section-title">Core Competencies &amp; Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skills-row">
+        <div class="skills-category">Cloud Platforms:</div>
+        <div class="skills-list">AWS (Primary), GCP (Certified), Azure (Basics)</div>
+      </div>
+      <div class="skills-row">
+        <div class="skills-category">Containers &amp; K8s:</div>
+        <div class="skills-list">Kubernetes (K8s), Docker, Helm Charts, Argo CD, ECS, Container Orchestration,
+          Microservices</div>
+      </div>
+      <div class="skills-row">
+        <div class="skills-category">IaC &amp; Config Mgmt:</div>
+        <div class="skills-list">Terraform (Modules &amp; State Mgmt), AWS CloudFormation, Ansible (Playbooks &amp;
+          Roles), AWS SSM</div>
+      </div>
+      <div class="skills-row">
+        <div class="skills-category">CI/CD &amp; Versioning:</div>
+        <div class="skills-list">Jenkins Pipelines, AWS CodePipeline, GitHub Actions, GitLab CI/CD, Git, GitHub,
+          Bitbucket, CodeCommit</div>
+      </div>
+      <div class="skills-row">
+        <div class="skills-category">Programming &amp; Scripting:</div>
+        <div class="skills-list">Python (Boto3, Automation Scripts), Bash / Shell Scripting</div>
+      </div>
+      <div class="skills-row">
+        <div class="skills-category">Monitoring &amp; SRE:</div>
+        <div class="skills-list">Grafana, Prometheus, AWS CloudWatch, New Relic, Icinga, Azure Alerts, RCA &amp;
+          Post-Mortem Analysis</div>
+      </div>
+      <div class="skills-row">
+        <div class="skills-category">Operating Systems:</div>
+        <div class="skills-list">Linux (Ubuntu, Debian, RHEL, CentOS), Windows Server Administration, Web Servers
+          (Nginx, Apache)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Professional Experience -->
+  <section class="section">
+    <h2 class="section-title">Professional Experience</h2>
+
+    <!-- IBS Software -->
+    <div class="item">
+      <div class="item-header">
+        <div>
+          <span class="item-title">IBS Software</span> — <span class="item-role">Product Engineer — DevOps</span>
+        </div>
+        <span class="item-date">Feb 2026 – Present</span>
+      </div>
+      <ul class="bullets">
+        <li>Architect and maintain production-grade cloud infrastructure and multi-zone <strong>Kubernetes
+            (EKS/GKE)</strong> clusters hosting high-throughput SaaS product microservices.</li>
+        <li>Implement automated <strong>GitOps CI/CD and Jenkins pipelines</strong> using GitHub Actions and Helm
+          charts, decreasing release deployment lead time by <strong>45%</strong> with zero-downtime rolling updates.
+        </li>
+        <li>Standardize infrastructure provisioning across cloud environments using modular <strong>Terraform</strong>
+          and automated server configuration using <strong>Ansible</strong>.</li>
+        <li>Enforce least-privilege cloud security frameworks, AWS KMS encryption, and centralized secret
+          synchronization via AWS Secrets Manager and SSM Parameter Store.</li>
+      </ul>
+    </div>
+
+    <!-- QBurst Technologies -->
+    <div class="item">
+      <div class="item-header">
+        <div>
+          <span class="item-title">Qburst Technologies Pvt. Ltd.</span> — <span class="item-role">CloudOps
+            Engineer</span>
+        </div>
+        <span class="item-date">Nov 2023 – Jan 2026</span>
+      </div>
+      <ul class="bullets">
+        <li>Designed and managed scalable, secure cloud environments tailored to client needs across <strong>AWS and
+            GCP</strong>, supporting <strong>99.9% system uptime</strong>.</li>
+        <li>Automated operational tasks and routine maintenance with <strong>Python and Bash</strong>, improving team
+          productivity by <strong>25%</strong>.</li>
+        <li>Implemented multi-platform CI/CD pipelines (Jenkins, GitLab CI, AWS CodePipeline) to accelerate release
+          velocity and eliminate manual deployment errors.</li>
+        <li>Led performance tuning, auto-scaling configuration, and system availability optimization initiatives across
+          client workloads.</li>
+        <li>Participated in 24/7 on-call rotations, handling production incidents related to service downtime,
+          deployment failures, and system performance degradation while documenting RCA reports to enhance system
+          reliability.</li>
+      </ul>
+    </div>
+
+    <!-- SupportSages -->
+    <div class="item">
+      <div class="item-header">
+        <div>
+          <span class="item-title">SupportSages Consultancy Services Pvt. Ltd.</span> — <span class="item-role">DevOps
+            Engineer / System Administrator</span>
+        </div>
+        <span class="item-date">Sep 2021 – Nov 2023</span>
+      </div>
+      <ul class="bullets">
+        <li>Led CI/CD implementations using <strong>AWS CodePipeline and Jenkins</strong>, cutting release cycles by
+          <strong>30%</strong>.</li>
+        <li>Built and maintained automated Infrastructure as Code (IaC) deployments using <strong>Terraform and AWS
+            CloudFormation</strong>.</li>
+        <li>Managed containerized deployments on <strong>Kubernetes and AWS ECS</strong> with automated rolling
+          deployments.</li>
+        <li>Set up comprehensive monitoring and alerting dashboards with <strong>AWS CloudWatch, Grafana, and
+            Icinga</strong>.</li>
+        <li>Conducted post-mortem analyses for critical incidents to ensure continuous system reliability and zero data
+          loss.</li>
+        <li>Collaborated with development teams to enforce DevSecOps practices, backup automation, and disaster recovery
+          strategies.</li>
+        <li>Effectively troubleshooted Linux and Windows servers, showcasing deep proficiency in Linux system
+          administration, shell scripting, permission management, and server hardening.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Key Projects -->
+  <section class="section">
+    <h2 class="section-title">Key Projects &amp; Implementations</h2>
+
+    <div class="item">
+      <div class="item-header">
+        <div>
+          <span class="item-title">Employee Relieving Portal</span> — <span class="item-role">Python, Docker, PostgreSQL, RBAC, CI/CD</span>
+        </div>
+      </div>
+      <ul class="bullets">
+        <li>Engineered an automated enterprise offboarding and clearance processing platform with role-based access control (RBAC), multi-tier approval states, and automated document generation.</li>
+        <li>Containerized services using Docker, established automated CI/CD deployment pipelines, and configured persistent storage with automated backup strategies.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <div>
+          <span class="item-title">Ansible Playbook for Windows RDP &amp; Server Fleet Management</span> — <span
+            class="item-role">Ansible, Bash, Linux</span>
+        </div>
+      </div>
+      <ul class="bullets">
+        <li>Automated updates of RDP ports and credential rotations across a fleet of Windows and Linux servers,
+          enhancing security posture and minimizing manual intervention.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <div>
+          <span class="item-title">Krypton — Cloud Infrastructure Platform</span> — <span class="item-role">Kubernetes,
+            Docker, Argo CD, Helm</span>
+        </div>
+      </div>
+      <ul class="bullets">
+        <li>Engineered a cloud-native platform orchestrating containerized microservices across Kubernetes with
+          automated GitOps delivery pipelines.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Education & Certifications Side-by-Side -->
+  <section class="section">
+    <div class="two-col-grid">
+      <div class="col">
+        <h2 class="section-title">Education</h2>
+        <div class="edu-item">
+          <div>
+            <strong style="color: #1A202C;">B.Tech in Computer Science &amp; Engineering</strong><br>
+            <span style="color: #4A5568;">Albertian Institute of Science &amp; Technology (AISAT)</span>
+          </div>
+          <span style="color: #718096; font-size: 8.2pt; font-weight: 600;">2017 – 2021</span>
+        </div>
+        <div class="edu-item" style="margin-top: 3px;">
+          <div>
+            <strong style="color: #1A202C;">Higher Secondary Education</strong><br>
+            <span style="color: #4A5568;">St. Francis Assisi HSS, Arthunkal</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <h2 class="section-title">Certifications &amp; Details</h2>
+        <div class="cert-item">
+          <div>
+            <strong style="color: #1A202C;">Google Cloud Associate Cloud Engineer (GCP ACE)</strong><br>
+            <span style="color: #2B6CB0; font-weight: 600;">Google Cloud Certified</span>
+          </div>
+          <span style="color: #718096; font-size: 8.2pt; font-weight: 600;">Issued 04/2024</span>
+        </div>
+        <div style="font-size: 8.4pt; color: #4A5568; margin-top: 4px;">
+          <strong>Languages:</strong> English (Full Professional), Malayalam (Native), Hindi, Tamil<br>
+          <strong>Availability:</strong> Rotational shifts &amp; 24/7 on-call production support
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>

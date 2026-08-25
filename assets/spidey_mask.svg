@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" id="spidey-mask-svg">
+  <defs>
+    <!-- Suit Gradients -->
+    <radialGradient id="mask-base-gradient" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="var(--spidey-red-light, #FF2E36)"/>
+      <stop offset="60%" stop-color="var(--spidey-red, #E62429)"/>
+      <stop offset="100%" stop-color="var(--spidey-red-dark, #8B0000)"/>
+    </radialGradient>
+    
+    <linearGradient id="lens-border-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A1A24"/>
+      <stop offset="50%" stop-color="#05050A"/>
+      <stop offset="100%" stop-color="#2D2D3F"/>
+    </linearGradient>
+
+    <radialGradient id="lens-glass-gradient" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="40%" stop-color="#F0F4F8"/>
+      <stop offset="85%" stop-color="#D0DCE5"/>
+      <stop offset="100%" stop-color="#99AAB8"/>
+    </radialGradient>
+
+    <filter id="mask-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    
+    <filter id="eye-glow">
+      <feGaussianBlur stdDeviation="5" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background Aura Glow -->
+  <circle cx="250" cy="240" r="210" fill="var(--spidey-red, #E62429)" opacity="0.15" class="mask-aura" />
+
+  <!-- Main Mask Contour Group -->
+  <g class="mask-head-group">
+    <!-- Mask Head Shape -->
+    <path d="M 250 45 C 130 45, 80 130, 85 240 C 90 330, 150 435, 250 460 C 350 435, 410 330, 415 240 C 420 130, 370 45, 250 45 Z" 
+          fill="url(#mask-base-gradient)" 
+          stroke="var(--spidey-dark, #0B0E14)" 
+          stroke-width="6" 
+          class="mask-head-path"/>
+
+    <!-- SpiderWeb Lines Overlay -->
+    <g class="mask-web-lines" stroke="rgba(10, 10, 18, 0.45)" stroke-width="2.5" fill="none" stroke-linecap="round">
+      <!-- Radial Web Lines from Nose Bridge (250, 240) -->
+      <path d="M 250 240 L 250 45" />
+      <path d="M 250 240 L 190 55" />
+      <path d="M 250 240 L 135 80" />
+      <path d="M 250 240 L 95 130" />
+      <path d="M 250 240 L 85 190" />
+      <path d="M 250 240 L 87 260" />
+      <path d="M 250 240 L 105 330" />
+      <path d="M 250 240 L 140 395" />
+      <path d="M 250 240 L 190 440" />
+      <path d="M 250 240 L 250 460" />
+      <path d="M 250 240 L 310 440" />
+      <path d="M 250 240 L 360 395" />
+      <path d="M 250 240 L 395 330" />
+      <path d="M 250 240 L 413 260" />
+      <path d="M 250 240 L 415 190" />
+      <path d="M 250 240 L 405 130" />
+      <path d="M 250 240 L 365 80" />
+      <path d="M 250 240 L 310 55" />
+
+      <!-- Concentric Web Arcs Level 1 -->
+      <path d="M 215 210 Q 250 200 285 210 Q 295 240 285 270 Q 250 280 215 270 Q 205 240 215 210 Z" stroke-width="2"/>
+      
+      <!-- Concentric Web Arcs Level 2 -->
+      <path d="M 170 170 Q 250 150 330 170 Q 350 240 330 310 Q 250 330 170 310 Q 150 240 170 170 Z" stroke-width="2"/>
+
+      <!-- Concentric Web Arcs Level 3 -->
+      <path d="M 125 120 Q 250 95 375 120 Q 400 240 375 360 Q 250 385 125 360 Q 100 240 125 120 Z" stroke-width="2"/>
+
+      <!-- Concentric Web Arcs Level 4 Outer -->
+      <path d="M 95 75 Q 250 55 405 75 Q 420 240 405 405 Q 250 445 95 405 Q 80 240 95 75 Z" stroke-width="2"/>
+    </g>
+
+    <!-- Center Spider Emblem on Forehead/Bridge -->
+    <path d="M 250 225 L 246 235 L 250 245 L 254 235 Z" fill="var(--spidey-dark, #0B0E14)" />
+
+    <!-- LEFT EYE LENS GROUP -->
+    <g class="eye-group left-eye-group" transform-origin="180 210">
+      <!-- Outer Black Frame -->
+      <path d="M 120 185 C 130 145, 205 160, 225 215 C 228 225, 220 245, 195 255 C 150 270, 115 230, 120 185 Z" 
+            fill="url(#lens-border-gradient)" 
+            stroke="var(--spidey-dark, #0B0E14)" 
+            stroke-width="5" 
+            class="eye-frame left-frame"/>
+      <!-- Inner White Expressive Lens -->
+      <path d="M 130 190 C 138 158, 198 170, 215 215 C 217 222, 210 238, 190 246 C 155 258, 126 226, 130 190 Z" 
+            fill="url(#lens-glass-gradient)" 
+            filter="url(#eye-glow)"
+            class="eye-lens left-lens"/>
+      <!-- Inner Sheen / Reflection -->
+      <path d="M 138 193 Q 165 178, 195 195 Q 170 190, 145 208 Z" fill="#FFFFFF" opacity="0.8" opacity="0.9"/>
+    </g>
+
+    <!-- RIGHT EYE LENS GROUP -->
+    <g class="eye-group right-eye-group" transform-origin="320 210">
+      <!-- Outer Black Frame -->
+      <path d="M 380 185 C 370 145, 295 160, 275 215 C 272 225, 280 245, 305 255 C 350 270, 385 230, 380 185 Z" 
+            fill="url(#lens-border-gradient)" 
+            stroke="var(--spidey-dark, #0B0E14)" 
+            stroke-width="5" 
+            class="eye-frame right-frame"/>
+      <!-- Inner White Expressive Lens -->
+      <path d="M 370 190 C 362 158, 302 170, 285 215 C 283 222, 290 238, 310 246 C 345 258, 374 226, 370 190 Z" 
+            fill="url(#lens-glass-gradient)" 
+            filter="url(#eye-glow)"
+            class="eye-lens right-lens"/>
+      <!-- Inner Sheen / Reflection -->
+      <path d="M 362 193 Q 335 178, 305 195 Q 330 190, 355 208 Z" fill="#FFFFFF" opacity="0.8" opacity="0.9"/>
+    </g>
+
+  </g>
+</svg>

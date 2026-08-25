@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="black">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>System Maintenance | Sam Sunil DevOps Infrastructure</title>
+  <meta name="description" content="Infrastructure rollout in progress. Upgrading Kubernetes cluster pods and cloud pipelines.">
+  <meta name="robots" content="noindex, follow">
+  
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Infrastructure Maintenance | Sam Sunil">
+  <meta property="og:description" content="Zero-downtime rolling update in progress across cloud clusters.">
+  <meta property="og:image" content="assets/og-preview.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Fira+Code:wght@400;500;700&family=Outfit:wght@400;500;600;700;900&family=Rajdhani:wght@600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="stylesheet" href="styles.css?v=2.7">
+  <style>
+    .status-page-wrapper {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.5rem;
+      position: relative;
+      z-index: 2;
+    }
+    .status-card {
+      background: rgba(13, 17, 26, 0.85);
+      border: 1px solid rgba(0, 229, 255, 0.4);
+      border-radius: 16px;
+      padding: 3rem 2.5rem;
+      max-width: 640px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7), 0 0 35px rgba(0, 229, 255, 0.2);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(0, 229, 255, 0.12);
+      border: 1px solid #00E5FF;
+      color: #00E5FF;
+      font-family: var(--font-subheading);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      padding: 0.35rem 0.9rem;
+      border-radius: 30px;
+      margin-bottom: 1.5rem;
+    }
+    .progress-track {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--border-color);
+      height: 12px;
+      border-radius: 6px;
+      overflow: hidden;
+      margin: 1.5rem 0;
+      position: relative;
+    }
+    .progress-bar-glow {
+      height: 100%;
+      width: 88%;
+      background: linear-gradient(90deg, #FF2E36, #00E5FF);
+      border-radius: 6px;
+      box-shadow: 0 0 12px #00E5FF;
+      animation: progressPulse 2s infinite ease-in-out;
+    }
+    @keyframes progressPulse {
+      0%, 100% { opacity: 0.85; }
+      50% { opacity: 1; filter: brightness(1.2); }
+    }
+    .status-desc {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+    .status-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+  <!-- Canvas Background -->
+  <canvas id="web-canvas"></canvas>
+
+  <div class="status-page-wrapper">
+    <div class="status-card">
+      <div class="status-badge">
+        <i class="fas fa-arrows-rotate fa-spin"></i> ZERO-DOWNTIME ROLLOUT ACTIVE
+      </div>
+      <h1 style="font-family: var(--font-heading); font-size: 2.8rem; letter-spacing: 3px; color: #FFF; margin-bottom: 0.5rem;">
+        INFRASTRUCTURE MAINTENANCE
+      </h1>
+      <p class="status-desc">
+        Upgrading Kubernetes cluster nodes and CI/CD deployment pipelines. The Spider-Man DevOps suite is currently applying rolling microservice patches.
+      </p>
+
+      <div class="progress-track">
+        <div class="progress-bar-glow"></div>
+      </div>
+      <div style="font-family: 'Fira Code', monospace; font-size: 0.8rem; color: #8B949E; margin-bottom: 2rem; display: flex; justify-content: space-between;">
+        <span>Pods Replaced: 88%</span>
+        <span style="color: #3FB950;">Health Checks: PASSING</span>
+      </div>
+
+      <div class="status-actions">
+        <a href="/" class="btn-primary">
+          <i class="fas fa-rotate-right"></i> Check Live Status
+        </a>
+        <a href="https://github.com/sam-sunil-4" target="_blank" class="btn-secondary">
+          <i class="fab fa-github"></i> Inspect GitHub Repos
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

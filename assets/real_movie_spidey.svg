@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 700" width="100%" height="100%" id="real-movie-spidey-svg">
+  <defs>
+    <!-- Suit Gradients -->
+    <radialGradient id="classic-red-grad" cx="40%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#FF3B42"/>
+      <stop offset="50%" stop-color="#E62429"/>
+      <stop offset="100%" stop-color="#8B0000"/>
+    </radialGradient>
+    
+    <linearGradient id="classic-blue-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0066CC"/>
+      <stop offset="60%" stop-color="#004499"/>
+      <stop offset="100%" stop-color="#002255"/>
+    </linearGradient>
+
+    <radialGradient id="lens-glow-grad" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#EBF5FF"/>
+      <stop offset="100%" stop-color="#B0C4DE"/>
+    </radialGradient>
+
+    <filter id="spidey-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="15" stdDeviation="20" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#spidey-shadow)">
+    <!-- Web Thread Line from top -->
+    <line x1="250" y1="0" x2="250" y2="150" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
+    <line x1="250" y1="0" x2="250" y2="150" stroke="#0088FF" stroke-width="8" opacity="0.4"/>
+
+    <!-- Left Leg (Classic Blue & Red Boot) -->
+    <path d="M 180 380 C 140 440, 110 520, 120 620 C 125 640, 150 650, 170 630 C 180 570, 200 480, 220 400 Z" fill="url(#classic-blue-grad)"/>
+    <path d="M 120 540 C 115 580, 120 630, 170 630 C 180 580, 160 550, 140 540 Z" fill="url(#classic-red-grad)"/>
+
+    <!-- Right Leg (Classic Blue & Red Boot) -->
+    <path d="M 320 380 C 360 440, 390 520, 380 620 C 375 640, 350 650, 330 630 C 320 570, 300 480, 280 400 Z" fill="url(#classic-blue-grad)"/>
+    <path d="M 380 540 C 385 580, 380 630, 330 630 C 320 580, 340 550, 360 540 Z" fill="url(#classic-red-grad)"/>
+
+    <!-- Torso (Red Webbed Center & Blue Rib Panels) -->
+    <!-- Blue Side Rib Panels -->
+    <path d="M 180 250 C 160 290, 165 370, 180 400 L 220 400 C 200 350, 195 290, 200 250 Z" fill="url(#classic-blue-grad)"/>
+    <path d="M 320 250 C 340 290, 335 370, 320 400 L 280 400 C 300 350, 305 290, 300 250 Z" fill="url(#classic-blue-grad)"/>
+
+    <!-- Red Torso Core -->
+    <path d="M 200 250 C 195 290, 200 350, 220 400 L 280 400 C 300 350, 305 290, 300 250 C 270 240, 230 240, 200 250 Z" fill="url(#classic-red-grad)"/>
+
+    <!-- Spider Chest Emblem -->
+    <path d="M 250 280 L 246 295 L 250 310 L 254 295 Z" fill="#0A0D14"/>
+    <!-- Legs -->
+    <path d="M 250 285 Q 230 270 215 260 M 250 290 Q 225 285 210 280 M 250 295 Q 225 305 210 315 M 250 300 Q 230 320 215 335" stroke="#0A0D14" stroke-width="3" fill="none"/>
+    <path d="M 250 285 Q 270 270 285 260 M 250 290 Q 275 285 290 280 M 250 295 Q 275 305 290 315 M 250 300 Q 270 320 285 335" stroke="#0A0D14" stroke-width="3" fill="none"/>
+
+    <!-- Arms (Shooting / Holding Web Pose) -->
+    <!-- Left Arm -->
+    <path d="M 190 240 C 150 210, 130 180, 160 140 C 190 120, 220 160, 210 210 Z" fill="url(#classic-red-grad)"/>
+    <!-- Right Arm -->
+    <path d="M 310 240 C 350 210, 370 180, 340 140 C 310 120, 280 160, 290 210 Z" fill="url(#classic-red-grad)"/>
+
+    <!-- Hands meeting web line at top center -->
+    <path d="M 240 130 C 245 110, 255 110, 260 130 Z" fill="url(#classic-red-grad)"/>
+
+    <!-- Shoulders & Upper Chest Red Panel -->
+    <path d="M 180 240 Q 250 210 320 240 Q 300 170 250 160 Q 200 170 180 240 Z" fill="url(#classic-red-grad)"/>
+
+    <!-- Head & Mask -->
+    <path d="M 250 80 C 200 80, 180 120, 185 170 C 190 215, 220 245, 250 250 C 280 245, 310 215, 315 170 C 320 120, 300 80, 250 80 Z" fill="url(#classic-red-grad)" stroke="#0A0D14" stroke-width="4"/>
+
+    <!-- Webbing Overlay Pattern on Head & Body -->
+    <g stroke="rgba(10,13,20,0.5)" stroke-width="2" fill="none">
+      <!-- Head Radial Webbing -->
+      <path d="M 250 165 L 250 80 M 250 165 L 210 90 M 250 165 L 185 125 M 250 165 L 187 170 M 250 165 L 205 215 M 250 165 L 250 250 M 250 165 L 295 215 M 250 165 L 313 170 M 250 165 L 315 125 M 250 165 L 290 90"/>
+      <path d="M 225 145 Q 250 135 275 145 Q 285 165 275 185 Q 250 195 225 185 Q 215 165 225 145 Z"/>
+      <path d="M 200 120 Q 250 105 300 120 Q 310 165 300 210 Q 250 225 200 210 Q 190 165 200 120 Z"/>
+    </g>
+
+    <!-- Glowing Expressive Movie Lenses -->
+    <!-- Left Eye Lens -->
+    <path d="M 195 140 C 205 115, 235 130, 243 160 C 245 168, 238 180, 225 185 C 200 190, 192 165, 195 140 Z" fill="#0A0D14"/>
+    <path d="M 200 143 C 208 122, 232 135, 238 160 C 239 165, 234 175, 222 180 C 205 184, 198 163, 200 143 Z" fill="url(#lens-glow-grad)"/>
+
+    <!-- Right Eye Lens -->
+    <path d="M 305 140 C 295 115, 265 130, 257 160 C 255 168, 262 180, 275 185 C 300 190, 308 165, 305 140 Z" fill="#0A0D14"/>
+    <path d="M 300 143 C 292 122, 268 135, 262 160 C 261 165, 266 175, 278 180 C 295 184, 302 163, 300 143 Z" fill="url(#lens-glow-grad)"/>
+
+  </g>
+</svg>
